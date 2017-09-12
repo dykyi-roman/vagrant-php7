@@ -31,7 +31,11 @@ A simple Vagrant LAMP setup running PHP7.
 The default Ubuntu document root is /var/www/html. You can make your own virtual hosts under /var/www. This is different to previous releases which provides better security.
 - vagrant ssh
 - sudo ln -fs /vagrant/<website_folder_name>/ /var/www/<website_folder_name>
-- > <VirtualHost *:80>
-  > DocumentRoot /var/www/<website_folder_name>
-  > ServerName <website_folder_name>.dev
-  > </VirtualHost>
+- sudo vim /etc/apache2/sites-available/default.conf
+- and add new VirtualHost: 
+```
+<VirtualHost *:80>
+  DocumentRoot /var/www/<website_folder_name>
+  ServerName <website_folder_name>.dev
+</VirtualHost>
+```
