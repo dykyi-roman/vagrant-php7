@@ -18,6 +18,7 @@ A simple Vagrant LAMP setup running PHP7.
 ## How to use
 
 - Clone this repository into your project
+- Run ``sudo apt-get install nfs-common nfs-kernel-server``
 - Run ``vagrant up``
 - Add the following lines to your hosts file:
 ```
